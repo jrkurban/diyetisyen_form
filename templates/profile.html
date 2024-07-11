@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ patient.name }} Profili</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>{{ patient.name }} Profili</h1>
+    <p><strong>Yaş:</strong> {{ patient.age }}</p>
+    <p><strong>Boy (cm):</strong> {{ patient.height }}</p>
+    <p><strong>Kilo (kg):</strong> {{ patient.weight }}</p>
+    <p><strong>Cinsiyet:</strong> {{ patient.gender }}</p>
+    <p><strong>Tıbbi Durumlar:</strong> {{ patient.medical_conditions }}</p>
+    <p><strong>3 Günlük Besin Tüketim Kaydı:</strong> {{ patient.last_3_day }}</p>
+
+    <!-- Link to view weight graph -->
+    <a href="{{ url_for('patient_graph', index=index) }}"><i class="fa fa-line-chart"></i> Kilo Grafiği</a>
+
+    <!-- Other details or actions as needed -->
+
+</body>
+</html>

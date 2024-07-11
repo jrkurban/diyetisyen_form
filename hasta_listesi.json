@@ -1,0 +1,66 @@
+[
+    {
+        "name": "asdas",
+        "age": "23",
+        "height": "177",
+        "weight": "49",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "asd",
+        "last_3_day": "besin kayd\u0131",
+        "added_date": "2024-07-11T12:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T12:00:00",
+                "weight": "49"
+            }
+        ]
+    },
+    {
+        "name": "asdasd",
+        "age": "13",
+        "height": "55",
+        "weight": "12",
+        "gender": "Erkek",
+        "medical_conditions": "asdad",
+        "last_3_day": "besin kayd\u0131",
+        "added_date": "2024-07-11T12:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T12:00:00",
+                "weight": "12"
+            }
+        ]
+    },
+    {
+        "name": "Ay\u015fe demir",
+        "age": "44",
+        "height": "169",
+        "weight": "63",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "yok",
+        "last_3_day": "yok",
+        "added_date": "2024-07-11 12:57:39",
+        "weights": [
+            {
+                "date": "2024-07-11 12:57:39",
+                "weight": "63"
+            }
+        ]
+    },
+    {
+        "name": "Ay\u015fe demir",
+        "age": "44",
+        "height": "169",
+        "weight": "63",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "yok",
+        "last_3_day": "yok",
+        "added_date": "2024-07-11 13:54:44",
+        "weights": [
+            {
+                "date": "2024-07-11 13:54:44",
+                "weight": "63"
+            }
+        ]
+    }
+]

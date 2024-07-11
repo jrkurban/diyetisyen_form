@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ patient.name }} - Kilo Grafiği ve Bilgileri</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+            position: relative;
+        }
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+        .back-button {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+        }
+        .back-button a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #35424a;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .back-button a:hover {
+            background-color: #e8491d;
+        }
+        .chart-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="back-button">
+                <a href="{{ url_for('patient_list') }}">Geri Dön</a>
+            </div>
+            <h1>{{ patient.name }} - Kilo Grafiği ve Bilgileri</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="chart-container">
+            <canvas id="weightChart" width="800" height="400"></canvas>
+        </div>
+        <div class="patient-details">
+            <h2>Hasta Detayları</h2>
+            <p><strong>Ad Soyad:</strong> {{ patient.name }}</p>
+            <p><strong>Yaş:</strong> {{ patient.age }}</p>
+            <p><strong>Boy (cm):</strong> {{ patient.height }}</p>
+            <p><strong>Cinsiyet:</strong> {{ patient.gender }}</p>
+            <p><strong>Tıbbi Durumlar:</strong> {{ patient.medical_conditions }}</p>
+            <p><strong>3 Günlük Besin Tüketim Kaydı:</strong> {{ patient.last_3_day }}</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var weightData = {{ patient.weights | tojson }};
+            var dates = [];
+            var weights = [];
+
+            // Prepare data for Chart.js
+            weightData.forEach(function(data) {
+                dates.push(data.date);
+                weights.push(data.weight);
+            });
+
+            var ctx = document.getElementById('weightChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Kilo',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                        data: weights,
+                        fill: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        xAxes: [{
+                            type: 'time',
+                            time: {
+                                displayFormats: {
+                                    hour: 'MMM D, h:mm A'
+                                }
+                            },
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Tarih'
+                            }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: 'Kilo (kg)'
+                            }
+                        }]
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
