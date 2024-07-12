@@ -38,8 +38,6 @@ def submit():
     medical_conditions = request.form.get('medical_conditions')
     last_3_day = request.form.get('last_3_day')
 
-    formatted_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-
     patient = {
         'name': name,
         'age': age,
@@ -48,8 +46,7 @@ def submit():
         'gender': gender,
         'medical_conditions': medical_conditions,
         'last_3_day': last_3_day,
-        'added_date': formatted_date,
-        'weights': [{'date': formatted_date, 'weight': weight}]
+        'weights': [{'date': str(datetime.now()), 'weight': weight}]
     }
 
     patients = read_patients()
@@ -74,16 +71,25 @@ def profile(index):
     return redirect(url_for('patient_list'))
 
 
-@app.route('/update_weight/<int:index>', methods=['POST'])
-def update_weight(index):
-    new_weight = request.form.get('weight')
+@app.route('/graph/<int:index>')
+def patient_graph(index):
     patients = read_patients()
     if 0 <= index < len(patients):
         patient = patients[index]
-        formatted_date = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        patient['weights'].append({'date': formatted_date, 'weight': new_weight})
+        return render_template('patient_graph.html', patient=patient, index=index)
+    return redirect(url_for('patient_list'))
+
+
+@app.route('/update_weight/<int:index>', methods=['POST'])
+def update_weight(index):
+    new_weight = request.form.get('weight')
+    new_date = request.form.get('date')
+    patients = read_patients()
+    if 0 <= index < len(patients):
+        patient = patients[index]
+        patient['weights'].append({'date': new_date, 'weight': new_weight})
         write_patients(patients)
-    return redirect(url_for('profile', index=index))
+    return redirect(url_for('patient_graph', index=index))
 
 
 @app.route('/delete/<int:index>', methods=['POST'])
@@ -92,15 +98,6 @@ def delete_patient(index):
     if 0 <= index < len(patients):
         del patients[index]
         write_patients(patients)
-    return redirect(url_for('patient_list'))
-
-
-@app.route('/graph/<int:index>')
-def patient_graph(index):
-    patients = read_patients()
-    if 0 <= index < len(patients):
-        patient = patients[index]
-        return render_template('patient_graph.html', patient=patient)
     return redirect(url_for('patient_list'))
 
 

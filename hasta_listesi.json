@@ -1,65 +1,165 @@
 [
     {
-        "name": "asdas",
-        "age": "23",
-        "height": "177",
-        "weight": "49",
-        "gender": "Kad\u0131n",
-        "medical_conditions": "asd",
-        "last_3_day": "besin kayd\u0131",
-        "added_date": "2024-07-11T12:00:00",
-        "weights": [
-            {
-                "date": "2024-07-11T12:00:00",
-                "weight": "49"
-            }
-        ]
-    },
-    {
-        "name": "asdasd",
-        "age": "13",
-        "height": "55",
-        "weight": "12",
+        "name": "Mehmet Y\u0131lmaz",
+        "age": "35",
+        "height": "180",
+        "weight": "75",
         "gender": "Erkek",
-        "medical_conditions": "asdad",
-        "last_3_day": "besin kayd\u0131",
-        "added_date": "2024-07-11T12:00:00",
+        "medical_conditions": "Hipertansiyon",
+        "last_3_day": "Tavuk, Bal\u0131k, Meyve",
+        "added_date": "2024-07-11T14:00:00",
         "weights": [
             {
-                "date": "2024-07-11T12:00:00",
-                "weight": "12"
+                "date": "2024-07-11T14:00:00",
+                "weight": "75"
+            },
+            {
+                "date": "2024-07-13",
+                "weight": "77"
             }
         ]
     },
     {
-        "name": "Ay\u015fe demir",
-        "age": "44",
-        "height": "169",
-        "weight": "63",
+        "name": "Fatma Kaya",
+        "age": "50",
+        "height": "165",
+        "weight": "68",
         "gender": "Kad\u0131n",
-        "medical_conditions": "yok",
-        "last_3_day": "yok",
-        "added_date": "2024-07-11 12:57:39",
+        "medical_conditions": "Diyabet",
+        "last_3_day": "Sebze, Meyve, Su",
+        "added_date": "2024-07-11T15:00:00",
         "weights": [
             {
-                "date": "2024-07-11 12:57:39",
-                "weight": "63"
+                "date": "2024-07-11T15:00:00",
+                "weight": "68"
             }
         ]
     },
     {
-        "name": "Ay\u015fe demir",
-        "age": "44",
-        "height": "169",
-        "weight": "63",
-        "gender": "Kad\u0131n",
-        "medical_conditions": "yok",
-        "last_3_day": "yok",
-        "added_date": "2024-07-11 13:54:44",
+        "name": "Ali Demir",
+        "age": "28",
+        "height": "175",
+        "weight": "80",
+        "gender": "Erkek",
+        "medical_conditions": "Ast\u0131m",
+        "last_3_day": "Et, Sebze, Su",
+        "added_date": "2024-07-11T16:00:00",
         "weights": [
             {
-                "date": "2024-07-11 13:54:44",
-                "weight": "63"
+                "date": "2024-07-11T16:00:00",
+                "weight": "80"
+            }
+        ]
+    },
+    {
+        "name": "Zeynep \u015eahin",
+        "age": "32",
+        "height": "160",
+        "weight": "55",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "Yok",
+        "last_3_day": "Makarna, Salata, Meyve",
+        "added_date": "2024-07-11T17:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T17:00:00",
+                "weight": "55"
+            }
+        ]
+    },
+    {
+        "name": "H\u00fcseyin \u00d6z",
+        "age": "45",
+        "height": "178",
+        "weight": "85",
+        "gender": "Erkek",
+        "medical_conditions": "Kolesterol",
+        "last_3_day": "Tavuk, Bal\u0131k, Sebze",
+        "added_date": "2024-07-11T18:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T18:00:00",
+                "weight": "85"
+            }
+        ]
+    },
+    {
+        "name": "Emine \u00c7elik",
+        "age": "29",
+        "height": "167",
+        "weight": "60",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "Migren",
+        "last_3_day": "Pasta, \u00c7orba, Su",
+        "added_date": "2024-07-11T19:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T19:00:00",
+                "weight": "60"
+            }
+        ]
+    },
+    {
+        "name": "Ahmet Toprak",
+        "age": "39",
+        "height": "182",
+        "weight": "90",
+        "gender": "Erkek",
+        "medical_conditions": "Kalp Hastal\u0131\u011f\u0131",
+        "last_3_day": "Et, Sebze, Meyve",
+        "added_date": "2024-07-11T20:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T20:00:00",
+                "weight": "90"
+            }
+        ]
+    },
+    {
+        "name": "Sevgi Kar",
+        "age": "40",
+        "height": "170",
+        "weight": "65",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "Tiroid",
+        "last_3_day": "Yemek, Salata, \u00c7orba",
+        "added_date": "2024-07-11T21:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T21:00:00",
+                "weight": "65"
+            }
+        ]
+    },
+    {
+        "name": "Canan Ery\u0131lmaz",
+        "age": "26",
+        "height": "160",
+        "weight": "50",
+        "gender": "Kad\u0131n",
+        "medical_conditions": "Yok",
+        "last_3_day": "Meyve, Sebze, Et",
+        "added_date": "2024-07-11T22:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T22:00:00",
+                "weight": "50"
+            }
+        ]
+    },
+    {
+        "name": "Murat Altun",
+        "age": "34",
+        "height": "176",
+        "weight": "77",
+        "gender": "Erkek",
+        "medical_conditions": "Obezite",
+        "last_3_day": "Et, Ekmek, Meyve",
+        "added_date": "2024-07-11T23:00:00",
+        "weights": [
+            {
+                "date": "2024-07-11T23:00:00",
+                "weight": "77"
             }
         ]
     }

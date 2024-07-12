@@ -51,6 +51,32 @@
             background-color: #ffffff;
             box-shadow: 0px 0px 10px 0px #000;
         }
+        .form-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px 0px #000;
+        }
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px 0;
+        }
+        .form-container input[type="number"], .form-container input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+        }
+        .form-container input[type="submit"] {
+            background: #35424a;
+            color: #ffffff;
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .form-container input[type="submit"]:hover {
+            background: #e8491d;
+        }
     </style>
 </head>
 <body>
@@ -65,6 +91,16 @@
     <div class="container">
         <div class="chart-container">
             <canvas id="weightChart" width="800" height="400"></canvas>
+        </div>
+        <div class="form-container">
+            <h2>Yeni Kilo Ekle</h2>
+            <form action="{{ url_for('update_weight', index=index) }}" method="post">
+                <label for="new_date">Tarih:</label>
+                <input type="date" id="new_date" name="date" required>
+                <label for="new_weight">Yeni Kilo (kg):</label>
+                <input type="number" id="new_weight" name="weight" required>
+                <input type="submit" value="Ekle">
+            </form>
         </div>
         <div class="patient-details">
             <h2>Hasta Detayları</h2>
@@ -111,7 +147,7 @@
                             type: 'time',
                             time: {
                                 displayFormats: {
-                                    hour: 'MMM D, h:mm A'
+                                    day: 'MMM D, YYYY'
                                 }
                             },
                             scaleLabel: {
