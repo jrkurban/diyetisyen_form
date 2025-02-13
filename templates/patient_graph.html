@@ -115,11 +115,10 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var weightData = {{ patient.weights | tojson }};
+            var weightData = {{ patient.weights | tojson | safe }};
             var dates = [];
             var weights = [];
 
-            // Prepare data for Chart.js
             weightData.forEach(function(data) {
                 dates.push(data.date);
                 weights.push(data.weight);
