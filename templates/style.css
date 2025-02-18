@@ -110,4 +110,8 @@ footer{
     section .container{
         width: 520px;
     }
+
+    .form-container{
+        flex-direction: column-reverse;
+    }
 }
