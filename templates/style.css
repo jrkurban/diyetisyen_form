@@ -87,32 +87,25 @@ footer{
 /* Responsive Design */
 /* Max-Width: 1200px */
 @media(max-width: 1200px){
-   section .container{
+   .container{
     width: 940px;
-
-}
-.form-container{
-    flex-direction: column-reverse;
-}
-
+   }
 }
 /* Max-Width: 992px */
 @media (max-width: 992px){
     section .container{
-        width: 940px;
-    }
-
-    .form-container{
-        flex-direction: column-reverse;
+@media (max-width: 992px){
+    .container{
+        width: 720px;
     }
 }
-
-
 
 /* Max-Width: 768px */
 @media (max-width: 768px){
     section .container{
-        width: 520px;
+@media (max-width: 768px){
+    .container{
+        width: 100%;
     }
 
     .form-container{
