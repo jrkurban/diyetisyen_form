@@ -1,0 +1,121 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    position: relative;
+}
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+}
+.button-container {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+.button-container a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #e8491d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    
+}
+.button-container a:hover {
+    background-color: #111;
+}
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+.form-container label {
+    display: block;
+    margin: 10px 0 5px 0;
+}
+.form-container input[type="text"], .form-container input[type="number"], .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+}
+.form-container input[type="radio"] {
+    margin: 0 10px 0 0;
+}
+.form-container input[type="submit"] {
+    background: #35424a;
+    color: #ffffff;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+.form-container input[type="submit"]:hover {
+    background: #e8491d;
+    border-radius: 10%;
+    
+}
+
+footer{
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+/* Max-Width: 1200px */
+@media(max-width: 1200px){
+   section .container{
+    width: 940px;
+
+}
+.form-container{
+    flex-direction: column-reverse;
+}
+
+}
+/* Max-Width: 992px */
+@media (max-width: 992px){
+    section .container{
+        width: 940px;
+    }
+
+    .form-container{
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+/* Max-Width: 768px */
+@media (max-width: 768px){
+    section .container{
+        width: 520px;
+    }
+
+    .form-container{
+        flex-direction: column-reverse;
+    }
+}
